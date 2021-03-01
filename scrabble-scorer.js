@@ -44,7 +44,7 @@ let simpleScore = function(word){
   return word.length;
 };
 
-let vowelsBonus = function(word){
+let vowelBonusScore = function(word){
   word = word.toUpperCase();
   let vowelPoints = 0;
 
@@ -76,7 +76,7 @@ const scoringAlgorithms = [
   },
   { name: 'Bonus Vowels',
     description: 'Vowels are 3 pts, consonants are 1 pt.',
-    scoringFunction: vowelsBonus
+    scoringFunction: vowelBonusScore
   },
   { name: 'Scrabble',
     description: 'The traditional scoring algorithm',
@@ -135,7 +135,7 @@ module.exports = {
    transform: transform,
    oldPointStructure: oldPointStructure,
    simpleScore: simpleScore,
-   vowelsBonus: vowelsBonus,
+   vowelBonusScore: vowelBonusScore,
    scrabbleScore: scrabbleScore,
    scoringAlgorithms: scoringAlgorithms,
    newPointStructure: newPointStructure,
